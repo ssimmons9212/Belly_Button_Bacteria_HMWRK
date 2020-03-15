@@ -17,8 +17,10 @@ function buildMetadata(sample) {
     });
   }
   )};
-    // BONUS: Build the Gauge Chart
-    // buildGauge(data.WFREQ);
+//     // BONUS: Build the Gauge Chart
+// function buildGauge(WFREQ);
+
+
 
 
 function buildCharts(sample) {
@@ -49,10 +51,10 @@ function buildCharts(sample) {
       xaxis: {title:"OTU ID"}
 
     };
-    updatePlotly.newPlot("bubble", data, layout);
+    Plotly.newPlot("bubble", data, layout);
 
     // @TODO: Build a Pie Chart
-    d3.json(plotData).then(function(data){
+    d3.json(urlData).then(function(data){
       var values = data.sample_values.slice(0,10);
       var labels = data.otu_ids.slice(0,10);
       var display = data.otu_labels.slice(0,10);
@@ -63,7 +65,7 @@ function buildCharts(sample) {
         hovertext: display,
         type: "pie"
       }];
-      updatePlotly.newPlot('pie',pie_chart);
+      Plotly.newPlot('pie',pie_chart);
     });
   });
 };
