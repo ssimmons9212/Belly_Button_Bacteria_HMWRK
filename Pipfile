@@ -12,6 +12,7 @@ sqlalchemy = "*"
 pandas = "*"
 numpy = "*"
 flask-sqlalchemy = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
